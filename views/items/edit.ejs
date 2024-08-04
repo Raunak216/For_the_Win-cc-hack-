@@ -1,0 +1,40 @@
+<% layout("/layouts/boilerplate.ejs")%>
+<body>
+<br>
+
+<div class="row">
+<div class="col-6 offset-2 bg-light " >
+<h1>Edit your Item</h1>
+    <form method="POST" action="/items/<%= showitem._id %>?_method=PUT">
+    <div class="mb-3 mt-5">
+        <label for="title" class="form-label">Title</label>
+        <input class="form-control " type="text" value="<%= showitem.title %>" name="item[title]">
+    </div>
+    <div class="mb-3">
+        <label for="Price" class="form-label">Price</label>
+        <input class="form-control" type="number" value="<%= showitem.price %>" name="item[price]">
+    </div>
+    <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea class="form-control"  name="item[description]">describe your item</textarea>
+    </div>
+    <div class="mb-3">
+        <label for="image" class="form-label">image Url</label>
+        <input class="form-control" type="text" value="<%= showitem.image.url %>" name="item[image]">
+    </div>
+    
+        
+<button>
+    <span class="circle1"></span>
+    <span class="circle2"></span>
+    <span class="circle3"></span>
+    <span class="circle4"></span>
+    <span class="circle5"></span>
+    <span class="text">Submit</span>
+</button>
+    </form>
+    
+</div>
+</div>
+
+</body>

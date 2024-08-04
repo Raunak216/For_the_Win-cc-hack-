@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+    <li><%= showitem.title%></li>
+    <li><%=showitem.description%></li>
+    <li>&#8377;<%=showitem.price.toLocaleString("en-IN")%></li>
+    </ul>
+    <a href="/items/<%=showitem._id%>/edit">edit</a>
+    <br><br>
+    <form  method="post" action="/listings/<%=showitem._id%>?_method=DELETE">
+        <button>Delete</button>
+    </form>
+</body>
+
+</html>

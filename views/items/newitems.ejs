@@ -1,0 +1,39 @@
+<% layout("/layouts/boilerplate")%>
+<body>
+
+
+<br>
+<div class="row">
+<div class="col-6 offset-2 bg-light ">
+<br><br>
+<h1 >ADD  ITEMS</h1>
+    <form action="/items" method="POST">
+    <div class="mb-3 mt-5">
+        <label for="title" class="form-label">Title</label>
+        <input class="form-control " type="text"  name="item[title]">
+    </div>
+    <div class="mb-3">
+        <label for="Price" class="form-label">Price</label>
+        <input class="form-control" type="number" name="item[price]">
+    </div>
+    <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea class="form-control"  name="item[description]">describe your item</textarea>
+    </div>
+    <div class="mb-3">
+        <label for="image" class="form-label">image Url</label>
+        <input class="form-control" type="text"  name="item[image]">
+    </div>
+    
+        <button>
+    <span class="circle1"></span>
+    <span class="circle2"></span>
+    <span class="circle3"></span>
+    <span class="circle4"></span>
+    <span class="circle5"></span>
+    <span class="text">Submit</span>
+</button>
+    </form>
+</div>
+</div>
+    </body>
